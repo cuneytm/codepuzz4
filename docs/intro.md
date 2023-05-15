@@ -2,7 +2,9 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Tutorial Intronnnnbbbb
+
+**Burayi editledim**
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
@@ -25,6 +27,10 @@ The classic template will automatically be added to your project after you run t
 
 ```bash
 npm init docusaurus@latest my-website classic
+```
+
+```python
+print("hello")
 ```
 
 You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
