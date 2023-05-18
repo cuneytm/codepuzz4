@@ -23,11 +23,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Yarattıkça ve Başardıkça Mutlu Ol',
+    title: 'Yaratıcılığını Öne Çıkar',
     Svg: require('@site/static/img/personal.svg').default,
     description: (
       <>
-        Yaratıcılığını öne çıkar vizyoner ol
+        Bilgi ve deneyimin arttıkça motivasyonun yükselsin. Dahil olacağın teknik çevre ve deneyimlendiklerinle vizyonun değişsin.
       </>
     ),
   },
