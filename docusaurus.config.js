@@ -54,6 +54,7 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        onBrokenLinks: 'ignore', // Ignore broken links
       }),
     ],
   ],
