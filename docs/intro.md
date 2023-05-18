@@ -72,4 +72,22 @@ Hostname@Macos ~ % docker run -it -d -p 3000:3000 --name yenicontainerim imajimi
 f34fa7345ad4496d1cf15c71ecec5eff5168a37e1a11db890445ced10c905482
 ```
 
-* Bundan sonrası adım ise container'ı Vscode ile ilişkilendirip container'ın içerisinde kendi istediğinize göre içerik yaratmak ve format değişikliklerine gitmektir.  Github bağlantısı az sonra...
+* Bundan sonrası adım ise container'ı Vscode ile ilişkilendirip container'ın içerisinde kendi istediğinize göre içerik yaratmak ve format değişikliklerine gitmektir.  
+
+## Repo Seçimi
+
+Uygulama geliştirirken üreteceğiniz veya değiştireceğiniz veriyi, sistemsel dosyaları scriptleri vs. mutlaka bir yerde tutmanız gerekiyor. Geleneksel yazılımcılar için bu genelde çalışılan bilgisayarın bir klasörü ve bir harici disk oluyor.  Eğer akıllara gelirse Github veya Gitlab'taki bir repoya konduğu da oluyor.
+
+Biz Codepuzz'da geliştirme yapılan lokalde - üzerinde çalışılan bilgisayar - veri tutmayacağız. Elbette container çalıştığı sürece dosyalarımız içerisinde duracak ancak dediğimiz gibi üzerinde çalıştığımız bilgisayarın dosya sistemi içerisinde değil.
+
+Peki altyapımızda canlı sistem için kullandığımız AWS Amplify ile testbed olarak kullandığımız Docker Desktop container arasındaki senkronizasyonu nasıl sağlayacağız.  
+
+İşte burada [Github](https://github.com) ve Git protokolü devreye giriyor.  
+
+Yapacağımız işle gayet basit aslında Vscode'umuzun ve container içerisindeki ilgili dizinimizi Git şemsiyesi altına alıyoruz. Ve yaptığımız değişiklikleri eklentileri Github'ta açtığımız repo üzerine push -yükleme- ediyoruz. 
+
+Aws Amplify'da ise uygulama yaratırken bize hangi repodan uygulamanın dosyalarını çekeceğimizi soruyor. Dolayısıyla Aws'e de github'daki repomuzu hedef gösteriyoruz o da gidiyor repoyu "pull" -indirme- ediyor.
+
+Sonuç itibari Github herkes için bir kavşak noktası oluyor.  Dosyalarımızın güvenliği, yedeklenmesi, çeşitli sistemlere entegre edilmesinde tamamen Github'a sırtımızı dayamış oluyoruz.
+
+Zaman geçtikçe burada bahsi geçen konuları detaylandıracağız.
