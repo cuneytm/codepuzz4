@@ -2,52 +2,72 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intronnnnbbbb
+# Başlarken 
 
-**Burayi editledim**
+Bu sitenin oluşturulması sırasında aşağıda çizimde belirtilmeye çalışılan yapı kullanılmıştır.  Birçok farklı şekilde de kurgulanabilmesine rağmen gerek hızlı geliştirme gerek oluşturulan veri ve sayfaların yedeklenmesi ve gerekse de maliyet unsurları bu yapıyı şimdilik en verimli yapı olarak öne çıkarmıştır.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+![Testbed ve Devbed](codepuzz_dev_topology.drawio.svg)
 
-## Getting Started
+:::tip Uygulama önerisi
 
-Get started by **creating a new site**.
+Diagram çiziminde [draw.io](https://app.diagrams.net) kullanılmıştır.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+:::
 
-### What you'll neednnn
+## Yapının Genel Çalışma Şekli  
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Diz üstü bilgisayar üzerinde kurulu olan **[Vscode](https://code.visualstudio.com)** ve **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** uygulamaları geliştirme altyapısı için yeterli olmuştur.  Ide olarak seçilen Vscode'un ve Docker Desktop üzerinde yaratılan container'ın ilişkilendirilmesi VsCode'un [Dev Container](https://code.visualstudio.com/docs/devcontainers/attach-container) extension'ı ile sağlanmıştır.  Bu sayede container'ın dosya sistemine ve shell'ine Vscode içerisinden direk erişim sağlanmıştır.
 
-## Generate a new site
+![DevContainersEkranGörüntüsü](DevContainersScreenshot.png)
 
-Generate a new Docusaurus site using the **classic template**.
+### Peki container'ı nasıl yarattık!? 
 
-The classic template will automatically be added to your project after you run the command:
+Docker Desktop'u dizüstü bilgisayara kurulumunu yaptıktan sonra ister kendi arayüzünden ister terminal'den uygulamayı yönetebilirsiniz.  
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-```python
-print("hello")
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+* Önce Ubuntu imajı ile container'ımızı ayağa kaldırdık. (İmajı indirmek için birşey yapmanıza gerek yok. Komut imajı lokalinizde bulamazsa gidip [Docker Hub](https://hub.docker.com/)'a bakacak şekilde çalışır) Aşağıdaki komut container'ı çalıştıracaktır.
 
 ```bash
-cd my-website
-npm run start
+docker run -it -d  -p 3000:3000  ubuntu  /bin/bash  
+
+docker ps #Çalışan container'ları listelemeniz için
+CONTAINER ID   IMAGE               COMMAND       CREATED         STATUS         PORTS                    NAMES
+e177570b6dd9   ubuntu              "/bin/bash"   2 minutes ago   Up 2 minutes   0.0.0.0:3000->3000/tcp   funny_jang
+
+docker ps - a #Çalışmayan container'ları listelemeniz için
+
+````
+
+:::tip Öğrenilmesi Gerekenler
+[Docker komutları hayatı kolaylaştırır.](https://docs.docker.com/engine/reference/commandline/cli/) Üzerinde çalışan bilgisayarın x portunu container'ın y portuna ilişkilendirmek için kullanılan "-p" operatörü veya yine bilgisayardaki bir klasörü container'ın içerisindeki bir klasöre bağlayan "-v" operatörü gibi.  Bunlarla ilgili ayrı bir başlık açacağız.
+:::
+
+* Container'ın içerisindeki shell'e düşmek için,
+
+```bash
+Hostname@Macos ~ % docker exec -it e177570b6dd9 /bin/bash
+root@e177570b6dd9:/# pwd
+/
+root@e177570b6dd9:/# 
+````
+* Bu noktadan sonra artık kullanacağınız ubuntu işletim sistemi emrinize amade oluyor.  Hangi web servisini ve uygulamaları kuracaksanız üzerine yükleyip Tcp 3000 portundan çalıştırabilir kendi bilgisayarınızdaki browser'ınızdan http://localhost:3000 adresini çağırarak container'da çalışan web servisine erişebilirsiniz.  
+Biz codepuzz için öncelikle container içerisinde [node.js](https://nodejs.org/en) ve sonrasında da CMS olarak kullanacağımız [Docusaurus](https://docusaurus.io/)'un kurulumunu gerçekleştirdik.  
+
+* Container'ınızı ve üzerinde çalıştıracağınız uygulamaları yüklendikten sonra hemen veri girişine veya editleme işlemlerine başlamayın.  Zira container'ınızı imaj olarak henüz başlangıçta kaydetmek sizi bu zamana kadar yaptığınız adımları tekrarlamaktan kurtarır.
+
+```bash
+
+Hostname@Macos ~ % docker stop e177570b6dd9  #container'ımızı durdurduk.
+e177570b6dd9  
+
+Hostname@Macos ~ % docker commit e177570b6dd9 imajimin_ismi #container'ımızı imaj olarak kaydettik.
+sha256:789ca44655f63e4bc846502fd5e03e3cc751d5428c60712c4e9856a90699dc63
+
+Hostname@Macos ~ % docker images #Kontrol ediyoruz lokaldeki imaj listemizden. Bundan sonra istediğimiz gibi açıp kullanabiliriz.
+
+imajimin_ismi  7 seconds ago   77.8MB                                                           latest                                                 789ca44655f6   
+
+Hostname@Macos ~ % docker run -it -d -p 3000:3000 --name yenicontainerim imajimin_ismi #Yeni imajımla içini editleyeceğim yeni bir container açabiliriz artık
+f34fa7345ad4496d1cf15c71ecec5eff5168a37e1a11db890445ced10c905482
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+* Bundan sonrası adım ise container'ı Vscode ile ilişkilendirip container'ın içerisinde kendi istediğinize göre içerik yaratmak ve format değişikliklerine gitmektir.  Github bağlantısı az sonra...
