@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Codepuzz',
-  tagline: 'Kodlamaya Dair İşe Yarar Bilgiler...',
+  tagline: 'Kodlamaya Ve Sistem Yönetimine Dair İşe Yarar Bilgiler...',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
