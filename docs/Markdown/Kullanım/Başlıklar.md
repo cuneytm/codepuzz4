@@ -30,3 +30,31 @@ Yukarıdakilerin çıktıları şu şekilde dönüşüyor;
 ###### H6 Başlık 
 
 
+Veya şöyle bir alternatif de bulunmakta;
+
+```
+H1 Başlık
+=========
+```
+H1 Başlık
+=========
+```
+H2 Başlık
+---------
+```
+H2 Başlık
+---------  
+
+**Başlıklara id verip bu id'nin link olarak kullanılmasını sağlayabilirsiniz**  
+
+```### Başlık {#custom-id}```
+
+```### Başlık {#1}```  >>> ```http://codepuzz/docs/Markdown/Kullanım/Başlıklar#1```
+
+### Başlık {#1}  
+
+:::info Kullanım önerileri
+* \# işareti sonrası başlıklarda mutlaka boşluk bırakın. 
+* Başlıklardan önce ve sonra birer boş satır bırakmaya özen gösterin.
+* Satır sonlarından sonra alt satıra geçmek için iki boşluk bırakabilirsiniz.  
+:::
