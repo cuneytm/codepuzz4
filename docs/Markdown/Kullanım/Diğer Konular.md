@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 8
 description:  Kategorize Edilmeyen kullanılabilir diğer konuları inceleyeceğiz
 tags:
   - Diğer

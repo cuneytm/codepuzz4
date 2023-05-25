@@ -6,6 +6,7 @@ sidebar_position: 1
 
 Bu sitenin oluşturulması sırasında aşağıda çizimde belirtilmeye çalışılan yapı kullanılmıştır.  Birçok farklı şekilde de kurgulanabilmesine rağmen gerek hızlı geliştirme gerek oluşturulan veri ve sayfaların yedeklenmesi ve gerekse de maliyet unsurları bu yapıyı şimdilik en verimli yapı olarak öne çıkarmıştır.
 
+## Topoloji  
 
   ![Testbed ve Devbed](codepuzz_dev_topology.drawio.svg)
 
