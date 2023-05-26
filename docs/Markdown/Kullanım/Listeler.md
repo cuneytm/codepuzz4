@@ -7,7 +7,7 @@ tags:
   - Formatlar
 ---
 Markdown'da listeleri sıralı(ordered) ve unordered(sırasız) olarak yaratma imkanımız var.  
-## Sıralı liste yaratma  
+## Sıralı (ordered) liste yaratma  
 
  ```
  1. Birinci madde
