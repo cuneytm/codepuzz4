@@ -15,7 +15,7 @@ Döküman içerisinde link vermek için kullandığımız format şudur;
 
 Örnek;  
 
-```[Buraya Tıklayabilirsiniz!](www.codepuzz.com)``` >>> [Buraya Tıklayabilirsiniz!](www.codepuzz.com)
+```[Buraya Tıklayabilirsiniz!](https://www.codepuzz.com)``` >>> [Buraya Tıklayabilirsiniz!](https://www.codepuzz.com)
 
 ## İmaj Kullanımı
 

@@ -69,7 +69,7 @@ Hücreler içerisinde Markdown yazım paternlerini kullanma imkanımız da var.
 
 |<u>Başlık1</u>|**Başlık2**|*Başlık3*|
 |:---|---:|:---:|
-|**Elemnt**|[Ele](url)|1|
+|**Elemnt**|Ele|1|
 |*abc*|_b_|&#128512|  
 
 ## İleri Düzey Tablo Oluşturma
