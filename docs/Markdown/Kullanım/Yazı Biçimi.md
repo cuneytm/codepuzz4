@@ -8,51 +8,56 @@ tags:
 ---
 
 
-Markdown'da yazı şekil şemal ve görünümünü değiştirmek için çeşitli paternler kullanılır.  
-Bu paternler "her editörün tanıdıkları" veya "editörü yazan firmanın/kişinin keyfiyetine kalmış tanınabilecek paternler" olarak ayrılıyor.   Örneğin Github veya şu an bakmakta olduğunun sayfanın altyapısında da bazı paternler tanınırken bazılar tanınmıyor. 
+Markdown'da ilk öğreneceğimiz konular temel yazım kuralları (basic syntax) olacaktır. Bu MD(Markdown) yazım kuralları her MD destekleyen editör, uygulama ve servis tarafından tanınır desteklenir.  
 
-* **<u>İlk olarak her editörün tanıdıkları;</u>**
 
-  #### Kelime, cümle veya kelime gruplarını "Bold" yapmak için;
+* **<u>Yazım şekilleri için kullanabileceğimiz Temel yazım kuralları (basic syntax) </u>**  
 
-  ``**Codepuzz**`` veya ``__Codepuzz__``  >>> **Codepuzz**  
+  |Amaç|Yazım Şekli|Çıktı|
+  |:---|:---:|:---:|
+  |Bold Yapmak|``**Codepuzz**`` veya ``__Codepuzz__``|**Codepuzz**|
+  |İtalik Yapmak|``_Codepuzz_`` veya ``*Codepuzz*``| _Codepuzz_|
+  |Bold ve İtalik Yapmak|\*\*\_Codepuzz\_\*\*|**_Codepuzz_**  
 
-  #### Kelime, cümle veya kelime gruplarını "Italik" yapmak için;
+    > Eğer yazı karakterlerinin rengi, font tipi, büyüklüğünü vb. değiştirmek istiyorsak bu durumda MD bize gerekli seçenekler için yeterli değil.
+    >
+    >
+    >Bunları yapabilmek için  [html tag'lerini](https://www.w3schools.com/tags/) kullanmamız gerekiyor. 
+    >Örnek:  
+    >
+    >`<font size="3" color="yellow">Happy Markdown Day!</font>` >>>  <font size="4" color="red">Happy Markdown Day!</font>  
+    >
+    >veya altını çizmek için;  
+    >
+    >`<u>Happy Markdown Day!</u>` >>> <u>Happy Markdown Day!</u> 
+    >
+    >gibi...  
 
-  ``_Codepuzz_`` veya ``*Codepuzz*`` >>> _Codepuzz_
+:::info  
+Whatsapp gibi bazı uygulamalarda \_ve \* karakterleri kelime ve cümleleri yine italik ve bold yapmak için kullanılır. Bir nevi universal bir hal almıştır kullanımları. Whatsapp uygulamanızı bir deneyin :smile:  Daha fazla bilgi için [link burada!](https://faq.whatsapp.com/539178204879377)
+:::  
 
-  #### Her ikisini birden kullanmak istiyorsak;
+* #### <u>Bazı genişletilmiş yazım kurallarına (extended syntax) örnekler.</u>
 
-  \*\*\_Codepuzz\_\*\* >>> **_Codepuzz_**
-
-  :::info Renk, font tipi, büyüklüğünü vb. değiştirmek istiyorsak!?
-  :::
-
-    Bu durumda [html tag'lerini](https://www.w3schools.com/tags/) kullanmamız gerekiyor. Örnek:  
-
-    `<font size="3" color="yellow">Happy Markdown Day!</font>` >>>  <font size="4" color="red">Happy Markdown Day!</font>  
-    
-    veya altını çizmek için;  
-    
-    `<u>Happy Markdown Day!</u>` >>> <u>Happy Markdown Day!</u> 
-
-    gibi...
-
-    > *Whatsapp gibi bazı uygulamalarda \_ve \* karakterleri kelime ve cümleleri yine italik ve bold yapmak için kullanılır. Bir nevi universal bir hal almıştır kullanımları. Whatsapp uygulamanızı bir deneyin :smile:  Daha fazla bilgi için [link burada!](https://faq.whatsapp.com/539178204879377)*  
-    
-
-* #### <u>Birçok Markdown editörü tarafından desteklenen ancak standart olmayan bazı paternler de vardır.</u>
+:::warning  
+Bunlar her MD editörü tarafından desteklenmeyebilir
+:::
 
   1. **FootNote (Dipnot)**
 
-    Dipnot cümlesi.Sayfanın en altında belirir.Sonuna şu paterni atıyoruz.\[^1\]
+    Dipnot cümlesi.  Sayfanın en altında belirir.  Dipnot ekleyeceğimiz cümlenin sonuna şu paterni atıyoruz.\[^1\].  Daha sonra dökümanın en altında açıklamasını yazıyoruz.
 
-    \[^1\]: Burada da cümleyi refere ediyoruz.
+    \[^1\]: Dipnot Açıklaması.  
 
-    Sonuç şu şekilde oluyor;
+    Örnek:
 
-    ![Footnote SS](markdown_footnote.png)
-
+    ```Dipnot yazılması gereken ağır cümlemiz.[^1]```  
+    ```[^1]: Bu cümleye dipnotta yapılan açıklama```
+    
+    Çıktısı şu şekilde;  
+  
+  ![Footnote SS](markdown_footnote.png)  
+  
   2. **Emoji Kullanımı**
 
     Gülme efekti yapalım cümle sonuna. `:grinning:` >>> :grinning:
@@ -81,6 +86,13 @@ Markdown için kaçış karakteri backslash'tir `\` . Örneğin iki asteriks iş
 
 :::tip ipucu
 
-Html tag'lerinin görmezden gelinmesini sağlamak veya editörün yazılanı markdown olarak algılamaması için istediklerinizi backtick \`\` arasına yazabilirsiniz. ``<b>backtick arası :)</b>``
+Html tag'lerinin görmezden gelinmesini sağlamak veya editörün yazılanı markdown olarak algılamaması için istediklerinizi backtick \`\` arasına yazabilirsiniz.  Örnek:
+
+\`<b\>backtick arası :)</b\>\`
+
+Çıktısı
+
+`<b>backtick arası :)</b>`
+
 
 :::
