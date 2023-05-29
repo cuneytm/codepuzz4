@@ -91,4 +91,35 @@ Aws Amplify'da ise uygulama yaratırken bize hangi repodan uygulamanın dosyalar
 
 Sonuç itibari Github herkes için bir kavşak noktası oluyor.  Dosyalarımızın güvenliği, yedeklenmesi, çeşitli sistemlere entegre edilmesinde tamamen Github'a sırtımızı dayamış oluyoruz.
 
-Zaman geçtikçe burada bahsi geçen konuları detaylandıracağız.
+Zaman geçtikçe burada bahsi geçen konuları detaylandıracağız.   
+
+
+
+
+
+_**Güncelleme 1 - 29 Mayıs 2023**_
+***
+
+Repo ayarları hariç olmak üzere hızlıca docusaurus'u ayağa kaldırmak için aşağıdaki docker compose dosyasını da kullanabilirsiniz.  
+Ubuntu container içerisine node.js ve docusaurus kurulu olan imaj [Docker Hub](https://hub.docker.com/r/pytonish/dvu)'a yüklenmiştir.  Hazır olan imajı bilgisayarınıza indirip container olarak çalıştırmak için yapmanız gerekenler;
+
+1. Aşağıdakileri bir text dosyasına yapıştırın.  
+
+    ```
+    version: '3'
+    services:
+      dvu:
+        image: pytonish/dvu
+        working_dir: /codepuzz
+        ports:
+          - 3003:3000
+        command: bash -c "cd /codepuzz && npx docusaurus start --host 0.0.0.0 & tail -f /dev/null"  
+
+    ```
+2.  Text dosyasını docker-compose.yml olarak kaydedin.  
+
+3. Terminal uygulamanızı açıp ve dosyayı kaydettiğiniz klasörü altına gidip şu komutu yürütün.
+
+    ```docker-compose up -d ```  
+
+4. Tarayıcınızda http://localhost:3003 adresini kullanarak artık CMS arayüzünüze ulaşabilirsiniz.
