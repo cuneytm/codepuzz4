@@ -52,7 +52,7 @@ const config = {
     ],
   ],
 
-  themeConfig:
+  themeConfig: 
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
@@ -117,7 +117,9 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      onBrokenLinks: 'throw', // or 'warn' or 'ignore'
     }),
+   
 };
 
 module.exports = config;
