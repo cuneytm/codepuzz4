@@ -117,7 +117,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      onBrokenLinks: 'throw', // or 'warn' or 'ignore'
+      onBrokenLinks: 'ignore', // or 'warn' or 'ignore'
     }),
    
 };
