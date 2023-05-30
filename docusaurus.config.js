@@ -107,7 +107,18 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      onBrokenLinks: 'ignore', // or 'warn' or 'ignore'
+      onBrokenLinks: 'ignore', // or 'warn' or 'ignore',
+      plugins: [
+        // ...other plugins
+        
+        [
+          '@docusaurus/plugin-google-analytics',
+          {
+            trackingID: 'G-81CGLLSZ9B', // Replace with your actual Tracking ID
+            anonymizeIP: true, // Optional: enable IP anonymization
+          },
+        ],
+      ],
     }),
    
 };
