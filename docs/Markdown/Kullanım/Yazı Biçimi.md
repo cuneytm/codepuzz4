@@ -31,7 +31,7 @@ Markdown'da ilk öğreneceğimiz konular temel yazım kuralları (basic syntax) 
     >
     >`<u>Happy Markdown Day!</u>` >>> <u>Happy Markdown Day!</u> 
     >
-    >gibi...  
+    >gibi...  ./images/Markdown-mark.png
 
 :::info  
 Whatsapp gibi bazı uygulamalarda \_ve \* karakterleri kelime ve cümleleri yine italik ve bold yapmak için kullanılır. Bir nevi universal bir hal almıştır kullanımları. Whatsapp uygulamanızı bir deneyin :smile:  Daha fazla bilgi için [link burada!](https://faq.whatsapp.com/539178204879377)

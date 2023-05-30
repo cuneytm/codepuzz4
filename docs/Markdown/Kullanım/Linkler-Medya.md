@@ -1,10 +1,10 @@
 ---
 sidebar_position: 4
-description:  Döküman İçerisinde Link Vermeyi İnceleyeceğiz
+description:  Döküman İçerisinde Link ve Medya Dosyalarını Kullanmayı İnceleyeceğiz
 tags:
-  - Font
+  - Link
   - Markdown
-  - Formatlar
+  - Medya
 ---  
 
 ## Link Ekleme
@@ -49,7 +49,17 @@ Sayfaya yerleştirdiğiniz bir resimin üzerine tıklandığında bir linke gidi
 [![Markdown Wiki](Markdown-mark.png "Resim üzerine gelindiğinde tooltip olarak çıkacak yazı başlığı(title)")](https://en.wikipedia.org/wiki/Markdown) 
 ````
 
-[![Markdown Wiki](Markdown-mark.png "Resim üzerine gelindiğinde tooltip olarak çıkacak yazı başlığı(title)")](https://en.wikipedia.org/wiki/Markdown) 
+[![Markdown Wiki](Markdown-mark.png  "Resim üzerine gelindiğinde tooltip olarak çıkacak yazı başlığı(title)")](https://en.wikipedia.org/wiki/Markdown)  
+
+## İmajın Boyutunu Değiştirme 
+
+Bunun için MD'a özel bir durum yok HTML Tag'leri kullanmak zorundayız.
+
+```
+<img src="./images/Markdown-mark.png" alt="Image" width="50" height="70" />
+```
+<img src="./Markdown-mark.png" alt="Image" width="50" height="70" />
+
 
 ## Video iliştirme "embed etme"
 
