@@ -108,6 +108,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       onBrokenLinks: 'ignore', // or 'warn' or 'ignore',
+      metadata: [{name: 'keywords', content: 'yazilim, markdown,commonmark,codepuzz,repo yazı formatı,yazılım,readme yazma'}],
       plugins: [
         // ...other plugins
         
