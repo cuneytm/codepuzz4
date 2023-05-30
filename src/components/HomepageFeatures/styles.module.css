@@ -9,3 +9,9 @@
   height: 250px;
   width: 250px;
 }
+
+.featureSvgContainer {
+  display: flex;
+  justify-content: center;
+}
+

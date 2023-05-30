@@ -56,9 +56,9 @@ Sayfaya yerleştirdiğiniz bir resimin üzerine tıklandığında bir linke gidi
 Bunun için MD'a özel bir durum yok HTML Tag'leri kullanmak zorundayız.
 
 ```
-<img src="./images/Markdown-mark.png" alt="Image" width="50" height="70" />
+<img src="https://www.codepuzz.com/img/Markdown-mark.png" alt="Image" width="50" height="70" />
 ```
-<img src="./Markdown-mark.png" alt="Image" width="50" height="70" />
+<img src="https://www.codepuzz.com/img/Markdown-mark.png" alt="Image" width="80" height="70" />
 
 
 ## Video iliştirme "embed etme"

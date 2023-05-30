@@ -11,7 +11,7 @@ tags:
 Markdown'da ilk öğreneceğimiz konular temel yazım kuralları (basic syntax) olacaktır. Bu MD(Markdown) yazım kuralları her MD destekleyen editör, uygulama ve servis tarafından tanınır desteklenir.  
 
 
-* **<u>Yazım şekilleri için kullanabileceğimiz Temel yazım kuralları (basic syntax) </u>**  
+## **Temel yazım kuralları (basic syntax)**  
 
   |Amaç|Yazım Şekli|Çıktı|
   |:---|:---:|:---:|
@@ -31,13 +31,13 @@ Markdown'da ilk öğreneceğimiz konular temel yazım kuralları (basic syntax) 
     >
     >`<u>Happy Markdown Day!</u>` >>> <u>Happy Markdown Day!</u> 
     >
-    >gibi...  ./images/Markdown-mark.png
+    >gibi...  
 
 :::info  
 Whatsapp gibi bazı uygulamalarda \_ve \* karakterleri kelime ve cümleleri yine italik ve bold yapmak için kullanılır. Bir nevi universal bir hal almıştır kullanımları. Whatsapp uygulamanızı bir deneyin :smile:  Daha fazla bilgi için [link burada!](https://faq.whatsapp.com/539178204879377)
 :::  
 
-* #### <u>Bazı genişletilmiş yazım kurallarına (extended syntax) örnekler.</u>
+## **Genişletilmiş yazım kurallarına (extended syntax) örnekler**
 
 :::warning  
 Bunlar her MD editörü tarafından desteklenmeyebilir

@@ -8,7 +8,7 @@ tags:
 ---
 Bu başlık altında yazı düzenine ilişkin çeşitli kısa bilgiler vereceğiz.
 
-* **Alt satıra geçiş** 
+## **Alt satıra geçiş** 
 
   MD yazım kuralları içerisinde alt satıra geçiş için **2 boşluk bırakıp ve enter** tuşuna basmadığınız sürece bir alt satıra geçmiş olmazsınız.  
 
@@ -22,7 +22,7 @@ Bu başlık altında yazı düzenine ilişkin çeşitli kısa bilgiler vereceği
   ```<p>Şimdi bir alt satıra geçelim.<br>Bakalım devam ediyormu</p>```   
   :::
 
-* **Tab kullanımı**  
+## **Tab kullanımı**  
 
   Malesef MD içerisinde tab için özel bir durum yok.  İlla tab ile boşluk kullanmanız gerekirse bunu HTML destekli bir MD editörünüzde tag'lerle veya shortcode'lar ile yapabilirsiniz.  
   
@@ -43,7 +43,7 @@ Bu başlık altında yazı düzenine ilişkin çeşitli kısa bilgiler vereceği
   ````
   <tab>bir tab koyduk
   `````  
-* **Satır, kelime vs Hizalama**  
+## **Satır Hizalama**  
 
   Cümleyi kelimeyi bir satır içerisinde hizalamak için yine HTML tag'leri kullanmak zorundayız.  Temel MD yazım kuralları içerisinde bunun için de bir patern yok.  
   ```
