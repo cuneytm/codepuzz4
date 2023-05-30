@@ -100,16 +100,6 @@ const config = {
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-            
-            ],
-          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} DVU Software.`,
       },
