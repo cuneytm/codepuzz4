@@ -108,14 +108,14 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       onBrokenLinks: 'ignore', // or 'warn' or 'ignore',
-      metadata: [{name: 'keywords', content: 'yazilim, markdown,commonmark,codepuzz,repo yazı formatı,yazılım,readme yazma'}],
+      metadata: [{name: 'keywords', content: 'yazilim, markdown,commonmark,codepuzz,repo yazı formatı,yazılım,readme'}],
       plugins: [
         // ...other plugins
         
         [
           '@docusaurus/plugin-google-analytics',
           {
-            trackingID: 'G-81CGLLSZ9B', // Replace with your actual Tracking ID
+            trackingID: 'GT-MJKV432', // Replace with your actual Tracking ID
             anonymizeIP: true, // Optional: enable IP anonymization
           },
         ],
