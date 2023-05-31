@@ -9,7 +9,7 @@ tags:
 ---
 ## Kaynakça  
 
-|Açıklama|Link|
+|**Açıklama**|**Link**|
 |:---:|:---:|
 |MD Manifestosu - Gruber|[Daring-Fireball](https://daringfireball.net/projects/markdown/)|
 |Standart-CommonMark|[CommonMark](https://commonmark.org)|
