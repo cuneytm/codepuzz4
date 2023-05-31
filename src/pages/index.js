@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Sistem ve Yazılıma Dair Monular">
+      description="Kodlamaya Ve Sistem Yönetimine Dair İşe Yarar Bilgiler...">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
