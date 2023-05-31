@@ -109,6 +109,11 @@ const config = {
       },
       onBrokenLinks: 'ignore', // or 'warn' or 'ignore',
       metadata: [{name: 'keywords', content: 'yazilim, markdown,commonmark,codepuzz,repo yazı formatı,yazılım,readme'}],
+      
+      markdown: {
+        mermaid: true,
+      },
+      themes: ['@docusaurus/theme-mermaid'],
       plugins: [
         // ...other plugins
         
@@ -121,6 +126,13 @@ const config = {
           '@docusaurus/plugin-google-tag-manager',
           {
             containerId: 'GTM-KNNVB3D',
+          },
+          '@docusaurus/plugin-sitemap',
+          {
+            changefreq: 'weekly',
+            priority: 0.5,
+            ignorePatterns: ['/tags/**'],
+            filename: 'sitemap.xml',
           },
         ],
       ],

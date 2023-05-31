@@ -93,6 +93,20 @@ Html tag'lerinin görmezden gelinmesini sağlamak veya editörün yazılanı mar
 Çıktısı
 
 `<b>backtick arası :)</b>`
+:::  
 
 
-:::
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```  
+
+
+
+
+
+
+
