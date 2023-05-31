@@ -118,6 +118,10 @@ const config = {
             trackingID: 'G-Y6YQFF9V4E', // Replace with your actual Tracking ID
             anonymizeIP: true, // Optional: enable IP anonymization
           },
+          '@docusaurus/plugin-google-tag-manager',
+          {
+            containerId: 'GTM-KNNVB3D',
+          },
         ],
       ],
     }),
