@@ -110,6 +110,7 @@ const config = {
       onBrokenLinks: 'ignore', // or 'warn' or 'ignore',
       metadata: [{name: 'keywords', content: 'yazilim, markdown,commonmark,codepuzz,repo yazı formatı,yazılım,readme'}],
       
+      
       markdown: {
         mermaid: true,
       },
@@ -134,6 +135,13 @@ const config = {
             ignorePatterns: ['/tags/**'],
             filename: 'sitemap.xml',
           },
+          '@docusaurus/preset-classic',
+          {
+          gtag: {
+            trackingID: 'G-Y6YQFF9V4E',
+            anonymizeIP: true,
+          },
+      },
         ],
       ],
     }),
