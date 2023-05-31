@@ -96,17 +96,5 @@ Html tag'lerinin görmezden gelinmesini sağlamak veya editörün yazılanı mar
 :::  
 
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```  
-
-
-
-
-
 
 
