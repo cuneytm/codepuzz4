@@ -48,8 +48,16 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-Y6YQFF9V4E',
+          anonymizeIP: true,
+        },
+        googleTagManager: {
+          containerId: 'GTM-KNNVB3D',
+        },
       }),
     ],
+
   ],
 
   themeConfig: 
@@ -109,40 +117,9 @@ const config = {
       },
       onBrokenLinks: 'ignore', // or 'warn' or 'ignore',
       metadata: [{name: 'keywords', content: 'yazilim, markdown,commonmark,codepuzz,repo yazı formatı,yazılım,readme'}],
-      
-      
-      markdown: {
-        mermaid: true,
-      },
-      themes: ['@docusaurus/theme-mermaid'],
       plugins: [
         // ...other plugins
-        
-        [
-          '@docusaurus/plugin-google-gtag',
-          {
-            trackingID: 'G-Y6YQFF9V4E', // Replace with your actual Tracking ID
-            anonymizeIP: true, // Optional: enable IP anonymization
-          },
-          '@docusaurus/plugin-google-tag-manager',
-          {
-            containerId: 'GTM-KNNVB3D',
-          },
-          '@docusaurus/plugin-sitemap',
-          {
-            changefreq: 'weekly',
-            priority: 0.5,
-            ignorePatterns: ['/tags/**'],
-            filename: 'sitemap.xml',
-          },
-          '@docusaurus/preset-classic',
-          {
-          gtag: {
-            trackingID: 'G-Y6YQFF9V4E',
-            anonymizeIP: true,
-          },
-      },
-        ],
+       
       ],
     }),
    
