@@ -115,7 +115,7 @@ const config = {
         [
           '@docusaurus/plugin-google-analytics',
           {
-            trackingID: 'GT-MJKV432', // Replace with your actual Tracking ID
+            trackingID: 'G-Y6YQFF9V4E', // Replace with your actual Tracking ID
             anonymizeIP: true, // Optional: enable IP anonymization
           },
         ],
