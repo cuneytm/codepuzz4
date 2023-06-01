@@ -117,8 +117,14 @@ const config = {
       },
       onBrokenLinks: 'ignore', // or 'warn' or 'ignore',
       metadata: [{name: 'keywords', content: 'yazilim, markdown,commonmark,codepuzz,repo yazı formatı,yazılım,readme'}],
+      markdown: {
+        mermaid: true,
+      },
+      themes: ['@docusaurus/theme-mermaid'],
+
       plugins: [
         // ...other plugins
+        '@docusaurus/theme-mermaid',
        
       ],
     }),
