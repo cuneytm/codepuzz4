@@ -19,20 +19,21 @@ Markdown'da ilk öğreneceğimiz konular temel yazım kuralları (basic syntax) 
   |İtalik Yapmak|``_Codepuzz_`` veya ``*Codepuzz*``| _Codepuzz_|
   |Bold ve İtalik Yapmak|\*\*\_Codepuzz\_\*\*|**_Codepuzz_**  
 
-    > Eğer yazı karakterlerinin rengi, font tipi, büyüklüğünü vb. değiştirmek istiyorsak bu durumda MD bize gerekli seçenekler için yeterli değil.
-    >
-    >
-    >Bunları yapabilmek için  [html tag'lerini](https://www.w3schools.com/tags/) kullanmamız gerekiyor. 
-    >Örnek:  
-    >
-    >`<font size="3" color="yellow">Happy Markdown Day!</font>` >>>  <font size="4" color="red">Happy Markdown Day!</font>  
-    >
-    >veya altını çizmek için;  
-    >
-    >`<u>Happy Markdown Day!</u>` >>> <u>Happy Markdown Day!</u> 
-    >
-    >gibi...  
 
+  > Eğer yazı karakterlerinin rengi, font tipi, büyüklüğünü vb. değiştirmek istiyorsak bu durumda MD bize gerekli seçenekler için yeterli değil.
+  >
+  >
+  >Bunları yapabilmek için  [html tag'lerini](https://www.w3schools.com/tags/) kullanmamız gerekiyor. 
+  >Örnek:  
+  >
+  >`<font size="3" color="yellow">Happy Markdown Day!</font>` >>>  <font size="4" color="red">Happy Markdown Day!</font>  
+  >
+  >veya altını çizmek için;  
+  >
+  >`<u>Happy Markdown Day!</u>` >>> <u>Happy Markdown Day!</u> 
+  >
+  >gibi...  
+  
 :::info  
 Whatsapp gibi bazı uygulamalarda \_ve \* karakterleri kelime ve cümleleri yine italik ve bold yapmak için kullanılır. Bir nevi universal bir hal almıştır kullanımları. Whatsapp uygulamanızı bir deneyin :smile:  Daha fazla bilgi için [link burada!](https://faq.whatsapp.com/539178204879377)
 :::  
