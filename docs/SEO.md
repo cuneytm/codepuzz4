@@ -7,12 +7,6 @@ sidebar_position: 2
 2. [Google Tag Manager](https://tagmanager.google.com/#/home)  
 3. [Google Search Console](https://search.google.com/search-console/about)  
 
-```mermaid  
-graph TD;  
-    A-->B;  
-    A-->C;
-    A-->B-->C;   
-``` 
 
   
 
