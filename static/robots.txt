@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://www.codepuzz.com/sitemap.xml
+Host: https://www.codepuzz.com
