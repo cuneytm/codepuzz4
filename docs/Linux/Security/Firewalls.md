@@ -22,6 +22,44 @@ tags:
 | Arch Linux | nftables | Disabled by default |
 | Gentoo | iptables | Disabled by default |
 
+:::info  
+Dağıtımların container imajlarında firewall servisleri yüklü değildir. Bunları ayrıca yüklemek ve aktif hale getirmek gereklidir.  
+:::  
+## Mevcut Kuralları Listeleme  
+
+| Firewall Daemon | Command |
+|---|---|
+| ufw | `ufw status numbered` |
+| firewalld | `firewall-cmd -zone='$zonename' --list-all` |
+| iptables | `iptables -L -n -v` |
+| nftables | `nft list ruleset` |  
+
+:::info   
+firewalld için tüm kuralları bir anda görüntülemek için bir bash script yazılabilir.  
+
+````
+#!/bin/bash
+zones=$(sudo firewall-cmd --get-zones)
+
+for zone in $zones
+do
+    echo "Zone: $zone"
+    sudo firewall-cmd --zone=$zone --list-all
+    echo "-------------------------------------"
+done
+````
+:::  
+
+## Kuralların Sıralaması  
+
+Tüm firewall uygulamalarında olduğu gibi yukarıda bahsi geçen firewall daemon'larında da kural sıralaması önemlidir.  
+  * Kurallar listede yukarıdan aşağıya doğru kontrol edilir. 
+  * En son girilen kural listenin sonuna eklenir.
+  * Daemonlarda araya kural eklemek çıkarmak veya silmek için kurallara indeks numarası verilir. Örneğin ufw'de aradaki bir kuralı silmek için örneğin; 
+  `
+  ufw delete -n 1
+  ` komutu kullanılabilir.  Burada "1" numaralı kuralı sil dedik.
+
 
 ## Aktif ve Deaktif Hale Getiren Komutlar  
 
