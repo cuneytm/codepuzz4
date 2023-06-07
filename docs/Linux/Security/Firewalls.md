@@ -9,7 +9,7 @@ tags:
   - Servisler
 ---  
 
-## Dağıtımlar ile Beraber Gelen Güvenlik Duvarı Servisleri
+## Dağıtımlar Üzerindeki Güvenlik Duvarı Servisleri(Daemons)
 
 | Linux Distribution | Firewall Servisi | Status |
 |:---:|:---:|:---:|
