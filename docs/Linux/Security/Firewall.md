@@ -8,12 +8,28 @@ tags:
   - Firewall
   - Servisler
 ---  
+:::note
+## Başlamadan Önce   
+
+Yeni nesil veya klasik birçok firewall 🛡️ servisi üzerinde kural yazılırken **_veri trafiğinin başlatıldığı yön_** referans alınır.  
+ 
+"IN" veya "INBOUND" ⬅️ yönü dışarıdan içeriye doğru,  
+
+"OUT" veya "OUTBOUND" ➡️ yönü ise içeriden dışarıya doğru başlantılan bağlantılar(connections) için kullanılır.  
+
+**Örnek1**  
+Bir sunucu üzerinde kural yazıyorsanız ve sunucunun kendisinin dışarıdaki bir DNS sunucusuna erişmesine izin vermek istiyorsanız.  Bu kuralı DNS (UDP 53) için "OUT"(OUTBOUND)'a yazmalısınız.  
+**Örnek2**  
+Sunucunuzda TCP 80.port üzerinde bir web servisi çalışıyordur .  Dışarıdaki kullanıcıların bu servis portuna erişebilmeleri için "IN"(INOBUND) yönünde kural yazmanız gerekir.  
+ 
+Her ne kadar bağlantılar(connections) çift yönlü çalışsa da kuralları trafiğin başlama noktası baz alınarak tek yönlü yazılır.  Bu durum gözetimi yapan (stateful) çalışan tüm firewall cihazları ve uygulamaları için bu şekildedir.  
+:::
 
 ## Dağıtımlar Üzerindeki Güvenlik Duvarı Servisleri(Daemons)
 
 | Linux Distribution | Firewall Servisi | Status |
 |:---:|:---:|:---:|
-| Ubuntu | UFW | Enabled by default |
+| Ubuntu | UFW | Disabled by default |
 | Fedora | firewalld | Enabled by default |
 | CentOS | firewalld | Enabled by default |
 | Red Hat Enterprise Linux | firewalld | Enabled by default |
@@ -21,6 +37,8 @@ tags:
 | openSUSE | firewalld | Enabled by default |
 | Arch Linux | nftables | Disabled by default |
 | Gentoo | iptables | Disabled by default |
+| FreeBSD | pf | Enabled by default|  
+
 
 :::info  
 Dağıtımların container imajlarında firewall servisleri yüklü değildir. Bunları ayrıca yüklemek ve aktif hale getirmek gereklidir.  
@@ -89,7 +107,15 @@ Tüm firewall uygulamalarında olduğu gibi yukarıda bahsi geçen firewall daem
 | Basic Inbound | `sudo ufw allow from 192.168.1.0/24 to any` | Allow traffic from the 192.168.1.0/24 network to any destination. |
 | Basic Outbound | `sudo ufw allow to 192.168.1.0/24` | Allow traffic to the 192.168.1.0/24 network from any source. |
 | Complex Inbound | `sudo ufw allow from 192.168.1.0/24 to any port 80` | Allow HTTP traffic from the 192.168.1.0/24 network to any destination on port 80. |
-| Complex Outbound | `sudo ufw allow to 192.168.1.0/24 port 22` | Allow SSH traffic to the 192.168.1.0/24 network from any source on port 22. |   
+| Complex Outbound | `sudo ufw allow to 192.168.1.0/24 port 22` | Allow SSH traffic to the 192.168.1.0/24 network from any source on port 22. |  
+
+:::info  
+Ufw'de kural yazımı sırasında default kural yönü **"in"**(inbound)'tur. Bu nedenle ``ufw allow 80`` yazdığımızda bu dışarıdan içeriye doğru bir kural olarak nitelendirilir.  
+Ufw içerisinde yön belirtmek gerekirse "in","out" anahtar kelimelerini kurallara yazabiliriz. ```ufw allow out to 192.168.1.1```gibi. Bu 192.168.1.1 ip adresine doğru olan trafiğe izin ver demektir.  
+:::
+
+
+
 
 ## IPtables Kural Örnekleri 
 
