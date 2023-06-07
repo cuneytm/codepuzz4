@@ -122,4 +122,13 @@ Ubuntu container içerisine node.js ve docusaurus kurulu olan imaj [Docker Hub](
 
     ```docker-compose up -d ```  
 
-4. Tarayıcınızda http://localhost:3003 adresini kullanarak artık CMS arayüzünüze ulaşabilirsiniz.
+4. Tarayıcınızda http://localhost:3003 adresini kullanarak artık CMS arayüzünüze ulaşabilirsiniz.  
+
+
+## SEO  
+
+Sayfanın SEO yönetimi için şimdilik aşağıdaki entegrasyonlar yapılmıştır.  
+
+1. [Google Analytics](https://analytics.google.com/analytics/web/#/)  
+2. [Google Tag Manager](https://tagmanager.google.com/#/home)  
+3. [Google Search Console](https://search.google.com/search-console/about)  
