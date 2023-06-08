@@ -140,8 +140,9 @@ Her firewall uygulaması ve servisinde olduğu gibi loglama da önemli bir başl
 3. Loglama aşağıdaki belirtilen klasördeki dosyaya yapılır. 
     ```
     /var/log/ufw.log
-    ```
-    Örnek:
+    ```  
+
+    **Örnek**  
     Sunucumuz üzerinde loglama seviyesini Medium'a çıkaralım.  
     ```sudo ufw logging MEDIUM```  
     Mevcut kurallarımızı kontrol edelim.  
@@ -177,7 +178,7 @@ Her firewall uygulaması ve servisinde olduğu gibi loglama da önemli bir başl
     Log dosyasının içini silmek için şu komutu kullanabilirsiniz.  
     ```sudo truncate -s 0 /var/log/ufw.log```
     :::  
-      
+
 
 
 
