@@ -107,7 +107,7 @@ Tüm firewall uygulamalarında olduğu gibi yukarıda bahsi geçen firewall daem
 | Basic Inbound | `sudo ufw allow from 192.168.1.0/24 to any` | Allow traffic from the 192.168.1.0/24 network to any destination. |
 | Basic Outbound | `sudo ufw allow to 192.168.1.0/24` | Allow traffic to the 192.168.1.0/24 network from any source. |
 | Complex Inbound | `sudo ufw allow from 192.168.1.0/24 to any port 80` | Allow HTTP traffic from the 192.168.1.0/24 network to any destination on port 80. |
-| Complex Outbound | `sudo ufw allow to 192.168.1.0/24 port 22` | Allow SSH traffic to the 192.168.1.0/24 network from any source on port 22. |  
+| Complex Outbound | `sudo ufw allow to 192.168.1.0/24 port 22 proto tcp` | Allow SSH traffic to the 192.168.1.0/24 network from any source on port 22. |  
 
 :::info Not  
 Ufw'de kural yazımı sırasında default kural yönü **"in"**(inbound)'tur. Bu nedenle ``ufw allow 80`` yazdığımızda bu dışarıdan içeriye doğru bir kural olarak nitelendirilir.  
