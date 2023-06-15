@@ -11,7 +11,7 @@ tags:
 
 **[Lets Encrypt](https://letsencrypt.org)** özellikle web servislerinde kullanılmak üzere sertifika üretebileceğiniz açık kaynak ve ücretsiz bir sertifika otoritesi uygulamasıdır.  Certbot adını veren bir ajan kullanır. Bu ajanı web sunucunuz üzerinde kurup çalıştırabilir veya başka bir ortamda -örneğin kendi bilgisayarınızda- kurup burada sertifika üretip web sunucunuza sertifikaları yükleyebilirsiniz.  
 
-Biz aşağıda certbot ve pluginlerini içeren docker imajını kullanacağız sertifika yaratmak için.  
+Biz aşağıda certbot ve pluginlerini içeren docker imajını kullanacağız sertifika yaratmak için.  Lets Encrypt'in sitesinde basit bir script üretici koymuşlar.  Web servisinin çalıştığı sunucu üzerinde sertifika üretecekseniz bundan da faydalanabilirsiniz. [LetsEncyrpt](https://certbot.eff.org) 👈️
 :::  
 
 ## Sertifika Yaratma  
@@ -89,9 +89,15 @@ README		cert.pem	chain.pem	fullchain.pem	privkey.pem
 
 Bu noktadan sonra lokalimizdeki klasörde oluşan dosyaları alıp web sunucumuza yüklememiz yeterli oluyor.  
 
+**Yaratılan Sertifikan Detayının Ekran Görüntüsü**
+
+![Yaratılan Sertifikanın tarayıcı üzerinden detayına bakıldığındaki görüntüsü](cert_detail.png "Sertifika detayı") 
+
+
+
 ## Yenileme  
 
-Sertifikayı yenilemek için ise şu komutu crontab'a koymamız yeterli sertifikanın geçerlilik süresine yakın çalışmak üzere
+<u>Tüm dijital sertifikalar belirli bir tarih aralığı için verilirler.</u> Dolayısıyla sonlanma tarihlerine yakın yenilenmeleri gerekir.  Lets Encrypt ile ürettiğimiz sertifikayı yenilemek için ise şu komutu crontab'a koymamız yeterli.
 
 ```
 sudo docker run -it --rm --name certbot \
