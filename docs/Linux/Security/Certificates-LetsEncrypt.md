@@ -9,7 +9,7 @@ tags:
 ---  
 :::info Başlamadan Önce
 
-**[Lets Encrypt](https://letsencrypt.org)** özellikle web servislerinde kullanılmak üzere sertifika üretebileceğiniz açık kaynak ve ücretsiz bir sertifika otoritesi uygulamasıdır.  Certbot adını veren bir ajan kullanır. Bu ajanı web sunucunuz üzerinde kurup çalıştırabilir veya başka bir ortamda -örneğin kendi bilgisayarınızda- kurup burada sertifika üretip web sunucunuza sertifikaları yükleyebilirsiniz.  
+**[Lets Encrypt](https://letsencrypt.org)** özellikle web servislerinde kullanılmak üzere sertifika üretebileceğiniz açık kaynak ve ücretsiz bir sertifika otoritesi uygulamasıdır.  Certbot adını veren bir ajan kullanır. 💡[Nasıl Çalışır](https://letsencrypt.org/how-it-works/) Bu ajanı web sunucunuz üzerinde kurup çalıştırabilir veya başka bir ortamda -örneğin kendi bilgisayarınızda- kurup burada sertifika üretip web sunucunuza sertifikaları yükleyebilirsiniz.  
 
 >
 >Biz aşağıda certbot ve pluginlerini içeren docker imajını kullanacağız sertifika yaratmak için.  Lets Encrypt'in sitesinde basit bir script üretici koymuşlar.  Web servisinin çalıştığı sunucu üzerinde sertifika üretecekseniz bundan da faydalanabilirsiniz. [LetsEncyrpt](https://certbot.eff.org) 👈️
@@ -19,7 +19,7 @@ tags:
 ## Sertifika Yaratma  
 İzleyeceğimiz adımlar kısaca şu şekilde;  
 1. Docker Desktop ile içerisinde Certbot ve pluginleri bulunan bir container oluşturup internet üzerinden LetsEncrypt'ten sertifika talebinde bulunacağız
-2. Certbot'un üreteceği token bilgisini DNS kayıtlarımıza TXT kayıt tipinde ekleyeceğiz. Yukarıdaki maddeyi tetikleyince bize token'ı certbot verecek. 
+2. Certbot'un üreteceği token bilgisini DNS kayıtlarımıza TXT kayıt tipinde ekleyeceğiz. (Yukarıdaki maddeyi tetikleyince bize token'ı üretip certbot ekranda verecek.) 
 3. Sertifikamız imzalandıktan -üretildikten sonra- bulundukları klasörde kontrol edeceğiz.  
 4. Web sunucumuza sertifikaları yükleyeceğiz. (Bu adım bu makalenin konusu değildir.)  
 
