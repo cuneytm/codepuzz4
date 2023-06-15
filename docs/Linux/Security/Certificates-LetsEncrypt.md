@@ -7,16 +7,18 @@ tags:
   - Security
   - Certificates
 ---  
-:::note Başlamadan Önce
+:::info Başlamadan Önce
 
 **[Lets Encrypt](https://letsencrypt.org)** özellikle web servislerinde kullanılmak üzere sertifika üretebileceğiniz açık kaynak ve ücretsiz bir sertifika otoritesi uygulamasıdır.  Certbot adını veren bir ajan kullanır. Bu ajanı web sunucunuz üzerinde kurup çalıştırabilir veya başka bir ortamda -örneğin kendi bilgisayarınızda- kurup burada sertifika üretip web sunucunuza sertifikaları yükleyebilirsiniz.  
 
-Biz aşağıda certbot ve pluginlerini içeren docker imajını kullanacağız sertifika yaratmak için.  Lets Encrypt'in sitesinde basit bir script üretici koymuşlar.  Web servisinin çalıştığı sunucu üzerinde sertifika üretecekseniz bundan da faydalanabilirsiniz. [LetsEncyrpt](https://certbot.eff.org) 👈️
+>
+>Biz aşağıda certbot ve pluginlerini içeren docker imajını kullanacağız sertifika yaratmak için.  Lets Encrypt'in sitesinde basit bir script üretici koymuşlar.  Web servisinin çalıştığı sunucu üzerinde sertifika üretecekseniz bundan da faydalanabilirsiniz. [LetsEncyrpt](https://certbot.eff.org) 👈️
+>
 :::  
 
 ## Sertifika Yaratma  
 
-Docker desktop yüklü bilgisayarımızda aşağıdaki komutu çalıştırabilirsiniz.  
+[Docker desktop](https://www.docker.com/products/docker-desktop/) yüklü bilgisayarımızda aşağıdaki komutu çalıştırabilirsiniz.  
 
 ````
 DVU@MACOS letencrypt % sudo docker run -it --rm --name certbot \
@@ -25,8 +27,12 @@ DVU@MACOS letencrypt % sudo docker run -it --rm --name certbot \
             certbot/certbot certonly --manual --preferred-challenges dns -d boatclouds.com
             
 ````  
-:::note not
-docker komutunda -v opsiyonu mount işlevini gerçekleştirir.  İlk yazdığınız path lokal klasörü `:`sonrası ise container içerisindeki klasörün path'ini ifade eder.
+:::tip not
+docker komutunda -v opsiyonu mount işlevini gerçekleştirir.  İlk yazdığınız path lokal klasörü `:`sonrası ise container içerisindeki klasörün path'ini ifade eder.  Yukarıdaki komutta "`/dvu/macos/letencrypt/`" klasöründe sertifikalarınızı bulacaksınız ve certbot'un diğer ürettiği dosyalar ile beraber"
+:::  
+
+:::tip not  
+İlgili docker imajına [docker hub](https://hub.docker.com/r/certbot/certbot) linkten ulaşabilirsiniz.  
 :::  
 
 Bu komutu yürüttüğünüzde şunu demek oluyorsunuz.  Ben dns challenge [^1] metodu ile sertifika üretmek istiyorum alan adımda şu.  Buna göre certbot, Letsencrypt CA sunucusuna alan adını ve alan adının dns kayıtlarında kontrol edilecek token'ı gönderiyor. Bu kontroldeki amaç alan adını gerçekten siz mi yönetiyorsunuz bunu anlamak.  
