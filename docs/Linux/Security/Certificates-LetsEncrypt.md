@@ -17,6 +17,11 @@ tags:
 :::  
 
 ## Sertifika Yaratma  
+İzleyeceğimiz adımlar kısaca şu şekilde;  
+1. Docker Desktop ile içerisinde Certbot ve pluginleri bulunan bir container oluşturup internet üzerinden LetsEncrypt'ten sertifika talebinde bulunacağız
+2. Certbot'un üreteceği token bilgisini DNS kayıtlarımıza TXT kayıt tipinde ekleyeceğiz. Yukarıdaki maddeyi tetikleyince bize token'ı certbot verecek. 
+3. Sertifikamız imzalandıktan -üretildikten sonra- bulundukları klasörde kontrol edeceğiz.  
+4. Web sunucumuza sertifikaları yükleyeceğiz. (Bu adım bu makalenin konusu değildir.)  
 
 [Docker desktop](https://www.docker.com/products/docker-desktop/) yüklü bilgisayarımızda aşağıdaki komutu çalıştırabilirsiniz.  
 
@@ -35,7 +40,7 @@ docker komutunda -v opsiyonu mount işlevini gerçekleştirir.  İlk yazdığın
 İlgili docker imajına [docker hub](https://hub.docker.com/r/certbot/certbot) linkten ulaşabilirsiniz.  
 :::  
 
-Bu komutu yürüttüğünüzde şunu demek oluyorsunuz.  Ben dns challenge [^1] metodu ile sertifika üretmek istiyorum alan adımda şu.  Buna göre certbot, Letsencrypt CA sunucusuna alan adını ve alan adının dns kayıtlarında kontrol edilecek token'ı gönderiyor. Bu kontroldeki amaç alan adını gerçekten siz mi yönetiyorsunuz bunu anlamak.  
+Bu komutu yürüttüğünüzde şunu demek oluyorsunuz.  "_Ben dns challenge [^1] metodu ile sertifika üretmek istiyorum alan adımda şu!_"  Buna göre certbot, Letsencrypt CA sunucusuna alan adını ve alan adının dns kayıtlarında kontrol edilecek token'ı gönderiyor. Bu kontroldeki amaç alan adını gerçekten siz mi yönetiyorsunuz bunu anlamak.  
 
 Komutun girilmesi sonrası certbot ajanı şunu ekranda size gösteriyor.  
 
