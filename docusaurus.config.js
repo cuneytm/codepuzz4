@@ -57,6 +57,7 @@ const config = {
         },
       }),
     ],
+    '@docusaurus/theme-live-codeblock'
 
   ],
 
@@ -64,7 +65,18 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
+      
       image: 'img/docusaurus-social-card.jpg',
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'X2FW1977E7',
+  
+        // Public API key: it is safe to commit it
+        apiKey: '79fc7cfc52a1e9531999cbfcfe871dbf',
+  
+        indexName: 'codepuzz',
+        contextualSearch: true,
+      },
       navbar: {
         title: 'Codepuzz',
         logo: {
@@ -84,6 +96,7 @@ const config = {
             label: 'DVU',
             position: 'right',
           },
+          
         
         ],
       },
@@ -120,7 +133,7 @@ const config = {
       markdown: {
         mermaid: true,
       },
-      themes: ['@docusaurus/theme-mermaid'],
+      themes: ['@docusaurus/theme-mermaid','@docusaurus/theme-live-codeblock'],
 
       plugins: [
         // ...other plugins

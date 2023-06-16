@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 description:  Linux Dağıtımları ve üzerlerindeki Firewall Servisleri
 tags:
   - Linux
